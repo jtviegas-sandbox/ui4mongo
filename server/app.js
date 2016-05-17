@@ -50,8 +50,9 @@ var options = {
   redirect: false
 };
 
-app.use(express.static('../public', options));
 app.use('/api/collections', collections);
+app.use(express.static( './public', options));
+
 
 // custom 404 page
 app.use(function(req, res){
