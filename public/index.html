@@ -37,7 +37,7 @@
 		  data: [
 		  {
 			type: "line",
-			dataPoints: finals	
+			dataPoints: finals,	
 		  }]
 		});
 		
@@ -56,25 +56,11 @@
         <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			Social Media Data Streaming Analysis</h1>
-			<script type="text/javascript">
-				
-				var api = new Api();
-				api.getAll('analysis', function(err, items){
-					console.log(items);
-				});
-
-			</script>
       </div>
     </div>
 	
 	<div id="chartContainer" style="height: 300px; width: 70%; margin-bottom: 120px; margin-left: 15%;"></div>
 
-	
-	<div>
-
-	</div>
-	
-	
     <div class="main" ng-controller="MainController">
 		<div class="footer">
 			<h3>Copyright 2016 - Team Happy</h3>
