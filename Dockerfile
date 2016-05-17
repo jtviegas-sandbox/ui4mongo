@@ -1,13 +1,18 @@
-FROM node:0.10-onbuild
+FROM node:0.12.14-wheezy
 
-# FROM registry-ice.ng.bluemix.net/ibmnode:latest
-# RUN apt-get -y --fix-missing update
+
+RUN apt-get -y --fix-missing update
 # RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git sed bc vim ssh
 
 WORKDIR /
-RUN mkdir -p /dist
-ADD dist /dist
-ADD package.json /
+RUN mkdir -p /app/server
+RUN mkdir -p /app/public
+
+ADD server /app/server
+ADD public /app/public
+
+ADD package.json /app
+WORKDIR /app
 RUN npm install -d --production 
 EXPOSE 8080
-CMD ["node", "dist/backend/app.js"]
+CMD ["node", "server/app.js"]
