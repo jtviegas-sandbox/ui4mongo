@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. ./VARS.sh
+./VARS.sh
 
 cf ic stop $CONTAINER
 sleep 12
