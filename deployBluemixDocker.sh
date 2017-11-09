@@ -5,4 +5,4 @@
 docker build -t $BX_IMG .
 docker push $BX_IMG
 
-./runBluemixDocker.sh
+#./runBluemixDocker.sh
